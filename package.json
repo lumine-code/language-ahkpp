@@ -7,8 +7,11 @@
     "url": "https://github.com/lumine-code/language-ahkpp/issues"
   },
   "keywords": [
-    "ahkpp",
-    "language"
+    "autohotkey",
+    "automation",
+    "scripting",
+    "hotkey",
+    "macro"
   ],
   "version": "1.0.0",
   "license": "MIT",
