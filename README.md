@@ -1,6 +1,8 @@
 # language-ahkpp
 
-Syntax highlighting for AutoHotkey v1 and v2. Provides separate grammars for both versions with automatic detection.
+Syntax highlighting for AutoHotkey v1 and v2.
+
+Provides separate grammars for both versions with automatic detection.
 
 Port of [AutoHotkey Plus Plus for VS Code](https://github.com/mark-wiemer-org/ahkpp).
 

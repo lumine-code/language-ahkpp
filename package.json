@@ -1,7 +1,7 @@
 {
   "name": "language-ahkpp",
   "author": "lumine-code",
-  "description": "Syntax highlighting for AutoHotkey v1 and v2",
+  "description": "Syntax highlighting for AutoHotkey v1 and v2.",
   "repository": "https://github.com/lumine-code/language-ahkpp",
   "bugs": {
     "url": "https://github.com/lumine-code/language-ahkpp/issues"
