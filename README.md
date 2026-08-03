@@ -8,7 +8,7 @@ Port of [AutoHotkey Plus Plus for VS Code](https://github.com/mark-wiemer-org/ah
 
 ## Features
 
-- **Grammars**: provides TextMate grammars.
+- **Grammars**: provides TextMate grammars maintained here.
 - **Dual version support**: separate grammars for AutoHotkey v1 and v2.
 - **Auto-detection**: uses v2 grammar when `#Requires AutoHotkey v2` is present.
 - **Complete syntax**: full highlighting for commands, functions, and expressions.
