@@ -7,11 +7,11 @@ const path = require("path");
 
 describe("AutoHotkey sample fixtures", () => {
   beforeEach(async () => {
-    await atom.packages.activatePackage("language-ahkpp");
+    await lumine.packages.activatePackage("language-ahkpp");
   });
 
   it("tokenizes sample.ahk", async () => {
-    const editor = await atom.workspace.open(path.join(__dirname, "fixtures", "sample.ahk"));
+    const editor = await lumine.workspace.open(path.join(__dirname, "fixtures", "sample.ahk"));
 
     expect(editor.getGrammar().scopeName).toBe("source.ahk2");
 
