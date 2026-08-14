@@ -16,7 +16,7 @@ Port of [AutoHotkey Plus Plus for VS Code](https://github.com/mark-wiemer-org/ah
 
 ## Installation
 
-To install `language-ahkpp` search for _language-ahkpp_ in the Install pane of the Lumine settings or run `lumine --install lumine-code/language-ahkpp`.
+To install `language-ahkpp` search for it in the Install pane of the Lumine settings, or run the command `lumine --install lumine-code/language-ahkpp`.
 
 ## Contributing
 
