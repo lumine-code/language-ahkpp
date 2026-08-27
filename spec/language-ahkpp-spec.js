@@ -39,7 +39,7 @@ describe("language-ahkpp", () => {
     expect(scopes.some((scope) => scope.includes("comment"))).toBe(true);
   });
 
-  // The per-grammar settings live in the `language` namespace; under the
+  // The per-grammar settings live in the `grammar` namespace; under the
   // legacy `editor` one nothing reads them.
   describe("scoped settings", () => {
     it("indents the body of a block", async () => {

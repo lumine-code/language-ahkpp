@@ -1,10 +1,10 @@
 {
   ".source.ahk1, .source.ahk2": {
-    "language": {
-      "tabLength": 2,
+    "editor": {
       "commentStart": "; ",
       "increaseIndentPattern": "^((?!;).)*\\{[^}]*$",
-      "decreaseIndentPattern": "^\\s*((?!;)[^{])*\\}.*$"
+      "decreaseIndentPattern": "^\\s*((?!;)[^{])*\\}.*$",
+      "tabLength": 2
     }
   }
 }
