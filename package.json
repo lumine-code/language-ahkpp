@@ -1,7 +1,7 @@
 {
   "name": "language-ahkpp",
   "author": "lumine-code",
-  "description": "Syntax highlighting for AutoHotkey v1 and v2.",
+  "description": "Syntax highlighting for AutoHotkey.",
   "repository": "https://github.com/lumine-code/language-ahkpp",
   "bugs": {
     "url": "https://github.com/lumine-code/language-ahkpp/issues"
@@ -11,18 +11,34 @@
     "automation",
     "scripting",
     "hotkey",
-    "macro"
+    "macro",
+    "tree-sitter"
   ],
   "version": "1.0.0",
   "license": "MIT",
   "files": [
     "grammars",
+    "lib",
     "settings",
     "snippets",
     "spec"
   ],
   "engines": {
-    "lumine": "^1.0.0"
+    "lumine": "^1.0.0",
+    "node": ">=24"
+  },
+  "main": "lib/main",
+  "consumedServices": {
+    "hyperlink.injection": {
+      "versions": {
+        "^1.0.0": "consumeHyperlinkInjection"
+      }
+    },
+    "todo.injection": {
+      "versions": {
+        "^1.0.0": "consumeTodoInjection"
+      }
+    }
   },
   "scripts": {
     "test": "lumine --test spec",

@@ -1,4 +1,4 @@
-; An AutoHotkey v2 sample, kept idiomatic so it is worth opening in the editor.
+; An AutoHotkey sample, kept idiomatic so it is worth opening in the editor.
 
 #Requires AutoHotkey v2.0
 #SingleInstance Force

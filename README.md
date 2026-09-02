@@ -1,22 +1,22 @@
 # language-ahkpp
 
-Syntax highlighting for AutoHotkey v1 and v2.
-
-Provides separate grammars for both versions with automatic detection.
-
-Port of [AutoHotkey Plus Plus for VS Code](https://github.com/mark-wiemer-org/ahkpp).
+Syntax highlighting for AutoHotkey.
 
 ## Features
 
-- **Grammars**: provides TextMate grammars maintained here.
-- **Dual version support**: separate grammars for AutoHotkey v1 and v2.
-- **Auto-detection**: uses v2 grammar when `#Requires AutoHotkey v2` is present.
-- **Complete syntax**: full highlighting for commands, functions, and expressions.
-- **Snippets**: templates and common constructs for both AutoHotkey versions.
+- **Grammars**: provides Tree-sitter grammars built from [tree-sitter-autohotkey](https://github.com/holy-tao/tree-sitter-autohotkey).
+- **File recognition**: parses AutoHotkey `.ahk` files.
+- **Complete syntax**: highlights directives, hotkeys, hotstrings, classes, functions, and expressions.
+- **Snippets**: provides a starter template for AutoHotkey scripts.
 
 ## Installation
 
 To install `language-ahkpp` search for it in the Install pane of the Lumine settings, or run the command `lumine --install lumine-code/language-ahkpp`.
+
+## Services
+
+- `hyperlink.injection`: consumed to highlight URLs inside strings and comments as clickable links.
+- `todo.injection`: consumed to highlight `TODO`-style markers inside comments.
 
 ## Contributing
 

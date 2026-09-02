@@ -1,7 +1,7 @@
 {
-  ".source.ahk2": {
+  ".source.ahk": {
     "AhkTemplateV2": {
-      "prefix": "#TEMPLATEv2",
+      "prefix": "#TEMPLATE",
       "body": ["#Requires AutoHotkey v2.0", "", ""]
     }
   }

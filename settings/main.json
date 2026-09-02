@@ -1,9 +1,7 @@
 {
-  ".source.ahk1, .source.ahk2": {
+  ".source.ahk": {
     "editor": {
       "commentStart": "; ",
-      "increaseIndentPattern": "^((?!;).)*\\{[^}]*$",
-      "decreaseIndentPattern": "^\\s*((?!;)[^{])*\\}.*$",
       "tabLength": 2
     }
   }

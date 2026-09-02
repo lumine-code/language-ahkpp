@@ -1,0 +1,22 @@
+{
+  "name": "AutoHotkey",
+  "scopeName": "source.ahk",
+  "type": "tree-sitter",
+  "parser": "tree-sitter-autohotkey",
+  "injectionNames": ["autohotkey", "ahk"],
+  "fileTypes": ["ahk"],
+  "comments": {
+    "start": "; ",
+    "block": ["/*", "*/"],
+    "line": ";"
+  },
+  "treeSitter": {
+    "parserSource": "github:holy-tao/tree-sitter-autohotkey#26334c7e8b4dab2b421140964c0e9949a67df2cd",
+    "wasmBuildTool": "tree-sitter-cli#v0.26.13",
+    "grammar": "autohotkey.wasm",
+    "highlightsQuery": "autohotkey-highlights.scm",
+    "tagsQuery": "autohotkey-tags.scm",
+    "foldsQuery": "autohotkey-folds.scm",
+    "indentsQuery": "autohotkey-indents.scm"
+  }
+}
