@@ -71,7 +71,8 @@
   (#any-of? @storage.type.primitive.ahk
     "Int8" "Int16" "Int32" "Int64" "UInt8" "UInt16" "UInt32" "IntPtr" "Float32" "Float64"))
 
-(param_sequence (identifier) @variable.parameter.ahk)
+((identifier) @variable.parameter.ahk
+  (#is? test.childOfType param_sequence))
 (default_param name: (identifier) @variable.parameter.ahk)
 (optional_param name: (identifier) @variable.parameter.ahk)
 (variadic_param name: (identifier) @variable.parameter.ahk)
