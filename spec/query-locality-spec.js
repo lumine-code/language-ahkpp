@@ -18,12 +18,12 @@ describe("AutoHotkey highlight query locality", () => {
     await editor.languageMode.atTransactionEnd();
   }
 
-  function capturesForRows(startRow, endRow) {
-    const layer = editor.languageMode.rootLanguageLayer;
-    return layer.queries.highlightsQuery.captures(layer.tree.rootNode, {
+  async function capturesForRows(startRow, endRow) {
+    const groups = await editor.getGrammarQueryCaptureGroups("highlightsQuery", {
       startPosition: new Point(startRow, 0),
       endPosition: new Point(endRow, 0),
     });
+    return groups.find(({ grammar }) => grammar === editor.getGrammar())?.captures ?? [];
   }
 
   it("preserves direct, default, optional, variadic, and empty parameter lists", async () => {
@@ -54,8 +54,8 @@ describe("AutoHotkey highlight query locality", () => {
     lines.push(") {", "}");
     await setUp(lines.join("\r\n"));
 
-    expect(editor.languageMode.rootLanguageLayer.tree.rootNode.hasError).toBe(false);
-    const captures = capturesForRows(3000, 3006);
+    expect((await editor.getSyntaxDiagnostics()).hasError).toBe(false);
+    const captures = await capturesForRows(3000, 3006);
     expect(captures.length).toBeLessThanOrEqual(32);
     const parameters = captures.filter((capture) => capture.name === "variable.parameter.ahk");
     expect(parameters.length).toBe(6);
