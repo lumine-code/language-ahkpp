@@ -18,7 +18,6 @@
   "license": "MIT",
   "files": [
     "grammars",
-    "lib",
     "settings",
     "snippets",
     "spec"
@@ -26,19 +25,6 @@
   "engines": {
     "lumine": "^1.0.0",
     "node": ">=24"
-  },
-  "main": "lib/main",
-  "consumedServices": {
-    "hyperlink.injection": {
-      "versions": {
-        "^1.0.0": "consumeHyperlinkInjection"
-      }
-    },
-    "todo.injection": {
-      "versions": {
-        "^1.0.0": "consumeTodoInjection"
-      }
-    }
   },
   "scripts": {
     "test": "lumine --test spec",

@@ -15,6 +15,7 @@
     "wasmBuildTool": "tree-sitter-cli#v0.27.0",
     "grammar": "autohotkey.wasm",
     "highlightsQuery": "autohotkey-highlights.scm",
+    "injectionsQuery": "autohotkey-injections.scm",
     "tagsQuery": "autohotkey-tags.scm",
     "foldsQuery": "autohotkey-folds.scm",
     "indentsQuery": "autohotkey-indents.scm"
