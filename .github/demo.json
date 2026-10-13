@@ -1,0 +1,16 @@
+{
+  "title": "language-ahkpp",
+  "description": "AutoHotkey syntax highlighting in the editor.",
+  "recordedOn": "2026-10-13",
+  "sourceRevision": "572136193150fc43b937ac17c3154d01330431c7",
+  "mode": "normal",
+  "fontSettings": "default",
+  "images": [
+    {
+      "file": "demo.png",
+      "label": "AutoHotkey syntax highlighting at the default editor font size.",
+      "width": 1100,
+      "height": 820
+    }
+  ]
+}

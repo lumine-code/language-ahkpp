@@ -9,6 +9,8 @@ Syntax highlighting for AutoHotkey.
 - **Complete syntax**: highlights directives, hotkeys, hotstrings, classes, functions, and expressions.
 - **Snippets**: provides a starter template for AutoHotkey scripts.
 
+![AutoHotkey syntax highlighting at the default editor font size.](.github/demo.png)
+
 ## Installation
 
 To install `language-ahkpp` search for it in the Install pane of the Lumine settings, or run the command `lumine --install lumine-code/language-ahkpp`.
