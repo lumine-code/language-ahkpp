@@ -1,16 +1,61 @@
 {
   "title": "language-ahkpp",
-  "description": "AutoHotkey syntax highlighting in the editor.",
-  "recordedOn": "2026-10-13",
-  "sourceRevision": "572136193150fc43b937ac17c3154d01330431c7",
+  "description": "AutoHotkey syntax highlighting at the default editor font size.",
+  "recordedOn": "2026-10-14",
+  "sourceRevision": "d2e0d76f11232e2ba1358bc6216aa4a8b3bebab4",
+  "themeSourceRevision": "14a69683b0e3238e2bc128fbfae3866c1e4ee9c6",
   "mode": "normal",
   "fontSettings": "default",
+  "scenario": "demo.js",
+  "recipeHash": "5adc4acbfe7860107dd96a1ea5f556a68b4cdac0f8cf5f0f247e2ddc2f9574a9",
+  "environment": {
+    "platform": "win32",
+    "arch": "x64",
+    "electron": "44.7.0",
+    "chrome": "152.0.7977.130",
+    "devicePixelRatio": 1,
+    "locale": "en-GB",
+    "fontFamily": "Fira Code, Menlo, DejaVu Sans Mono, Consolas, monospace",
+    "fontSize": 14,
+    "themes": ["one-day-syntax", "one-day-ui"]
+  },
+  "viewport": { "width": 1100, "height": 820 },
+  "cornerRadius": 10,
+  "sources": {
+    "editor": {
+      "revision": "c4d7a05fe6960ae6fb041981d6cf13e9c0286b17",
+      "dirty": true,
+      "workingTreeHash": "af0ec098e764416df9522f3c6e555050b520e4700da382b2b983b2ff3742bd0a"
+    },
+    "package": {
+      "revision": "d2e0d76f11232e2ba1358bc6216aa4a8b3bebab4",
+      "dirty": true,
+      "workingTreeHash": "c606d568a7fd1b065fc1ebc005d2eebf8cfda1b72ee353faedd60374e50aa57b"
+    },
+    "language-ahkpp": {
+      "revision": "d2e0d76f11232e2ba1358bc6216aa4a8b3bebab4",
+      "dirty": true,
+      "workingTreeHash": "c606d568a7fd1b065fc1ebc005d2eebf8cfda1b72ee353faedd60374e50aa57b"
+    },
+    "one-theme": {
+      "revision": "14a69683b0e3238e2bc128fbfae3866c1e4ee9c6",
+      "dirty": true,
+      "workingTreeHash": "25d6ed50595d6b10f7d53e41dbbe8f92dcb5c0e911871356f3e6138e5c76df57"
+    }
+  },
+  "fixtures": [
+    {
+      "file": "example.ahk",
+      "sha256": "9bbe82ae2ac2b9fdd143715c31659d2c400e9cf9763b8241b6e2104fb4717df1"
+    }
+  ],
   "images": [
     {
       "file": "demo.png",
       "label": "AutoHotkey syntax highlighting at the default editor font size.",
       "width": 1100,
-      "height": 820
+      "height": 820,
+      "sha256": "95a64888d909a10815a98a74f97b3b0b57ae862f8866bdd0137d336f47224db4"
     }
   ]
 }
