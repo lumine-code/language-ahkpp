@@ -2,7 +2,14 @@
   ".source.ahk": {
     "editor": {
       "commentStart": "; ",
-      "tabLength": 2
+      "tabLength": 2,
+      "commentDelimiters": {
+        "line": ";",
+        "block": ["/*", "*/"]
+      }
+    },
+    "bracket-matcher": {
+      "autocompleteCharacters": ["()", "[]", "{}", "\"\"", "''"]
     }
   }
 }
