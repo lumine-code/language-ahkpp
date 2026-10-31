@@ -42,6 +42,7 @@
     "prettier": "^3.9.10"
   },
   "specPackages": [
-    "bracket-matcher"
+    "bracket-matcher",
+    "snippets"
   ]
 }

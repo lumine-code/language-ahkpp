@@ -49,4 +49,35 @@ describe("ahkpp conservative indentation", () => {
       expect(editor.getText()).toBe(source);
     });
   });
+
+  it("keeps quoted recovery punctuation from indenting the next row", async () => {
+    for (const source of [
+      'value := "{',
+      'value := "(',
+      'value := "[',
+      "value := '{",
+      'value := "a`"{',
+    ]) {
+      await start("recovery.ahk", source);
+      editor.setCursorBufferPosition([0, Infinity]);
+      await editor.insertNewline();
+      expect(editor.lineTextForBufferRow(1)).withContext(source).toBe("");
+    }
+  });
+
+  it("retains the current margin while entering recovered literal text", async () => {
+    await start("recovery.ahk", 'Test() {\n  value := "{');
+    editor.setCursorBufferPosition([1, Infinity]);
+    await editor.insertNewline();
+    expect(editor.lineTextForBufferRow(2)).toBe("  ");
+  });
+
+  it("retains indentation for real incomplete containers and interpolation", async () => {
+    for (const source of ["Test() {", "value := [", 'Call("done", [']) {
+      await start("recovery.ahk", source);
+      editor.setCursorBufferPosition([0, Infinity]);
+      await editor.insertNewline();
+      expect(editor.indentationForBufferRow(1)).withContext(source).toBe(1);
+    }
+  });
 });

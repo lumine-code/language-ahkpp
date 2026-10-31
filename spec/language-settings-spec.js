@@ -1,10 +1,12 @@
 describe("ahkpp editing settings", () => {
-  let editor, pairingWasActive;
+  let editor, pairingWasActive, snippetsWereActive;
   beforeAll(() => {
     pairingWasActive = lumine.packages.isPackageActive("bracket-matcher");
+    snippetsWereActive = lumine.packages.isPackageActive("snippets");
   });
   afterAll(async () => {
     if (!pairingWasActive) await lumine.packages.deactivatePackage("bracket-matcher");
+    if (!snippetsWereActive) await lumine.packages.deactivatePackage("snippets");
   });
   beforeEach(async () => {
     jasmine.useRealClock();
@@ -20,25 +22,33 @@ describe("ahkpp editing settings", () => {
     expect(await editor.whenGrammarSettled()).toBe(true);
     editor.update({ autoIndent: false });
   }
-  for (const [scope, line, block] of [["source.ahk", ";", ["/*", "*/"]]]) {
-    it("exposes line and block comment metadata in " + scope, async () => {
+  for (const [scope, line] of [["source.ahk", ";"]]) {
+    it("exposes safe line comment metadata in " + scope, async () => {
       await start(scope);
-      expect(await editor.getCommentDelimitersForBufferPosition([0, 0])).toEqual({ line, block });
+      expect(await editor.getCommentDelimitersForBufferPosition([0, 0])).toEqual({
+        line,
+        block: undefined,
+      });
       await editor.toggleLineCommentsForBufferRows(0, 0);
       expect(editor.getText()).toBe(line + " value");
       await editor.toggleLineCommentsForBufferRows(0, 0);
       expect(editor.getText()).toBe("value");
     });
-    it("round trips block comments using the advertised delimiters in " + scope, async () => {
-      await start(scope);
-      const { block } = await editor.getCommentDelimitersForBufferPosition([0, 0]);
-      const options = {
-        commentStrings: { commentStartString: block[0], commentEndString: block[1] },
-      };
-      await editor.toggleLineCommentsForBufferRows(0, 0, options);
-      expect(editor.getText()).toBe(block[0] + " value " + block[1]);
-      await editor.toggleLineCommentsForBufferRows(0, 0, options);
-      expect(editor.getText()).toBe("value");
+    it("does not offer line-bound block markers to inline snippets in " + scope, async () => {
+      const snippets = (await lumine.packages.activatePackage("snippets")).mainModule;
+      await start(scope, "value := 1");
+      editor.setCursorBufferPosition([0, Infinity]);
+      await snippets.expandSnippet(editor, " ${BLOCK_COMMENT_START}note${BLOCK_COMMENT_END}");
+      expect(editor.getText()).toBe("value := 1 note");
+
+      await start(scope, "value := 1");
+      editor.setCursorBufferPosition([0, Infinity]);
+      await snippets.expandSnippet(editor, " ${LINE_COMMENT} note");
+      expect(editor.getText()).toBe("value := 1 ; note");
+      expect(await editor.whenGrammarSettled()).toBe(true);
+      expect(editor.scopeDescriptorForBufferPosition([0, 14]).getScopesArray()).toContain(
+        "comment.line.semicolon.ahk",
+      );
     });
   }
   it("pairs valid punctuation without duplicating unsupported quote or escape characters", async () => {

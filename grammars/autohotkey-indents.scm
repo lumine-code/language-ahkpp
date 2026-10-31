@@ -1,3 +1,7 @@
+; Unterminated strings can expose braces and parentheses as ERROR children.
+(ERROR ["\"" "'"] @match.next
+  (#set! indent.match startPosition))
+
 [
   "{"
   "("

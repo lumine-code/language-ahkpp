@@ -4,8 +4,7 @@
       "commentStart": "; ",
       "tabLength": 2,
       "commentDelimiters": {
-        "line": ";",
-        "block": ["/*", "*/"]
+        "line": ";"
       }
     },
     "bracket-matcher": {
