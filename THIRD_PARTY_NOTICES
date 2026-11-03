@@ -1,6 +1,7 @@
 ----- BEGIN THIRD-PARTY LICENSE: parser:holy-tao_tree-sitter-autohotkey -----
 Source: https://github.com/holy-tao/tree-sitter-autohotkey
-Revision: d2d7f1f5cbe79b4b04063d663661a8a9e3f7b19e
+Commit: 10be0bfa368a7726149d22f6a67badb3a11a8530
+Ref: 10be0bfa368a7726149d22f6a67badb3a11a8530
 
 Original file: LICENSE
 
