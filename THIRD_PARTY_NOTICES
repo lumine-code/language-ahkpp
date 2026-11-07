@@ -3,6 +3,9 @@ Source: https://github.com/holy-tao/tree-sitter-autohotkey
 Commit: 10be0bfa368a7726149d22f6a67badb3a11a8530
 Ref: 10be0bfa368a7726149d22f6a67badb3a11a8530
 
+Parser source: github:holy-tao/tree-sitter-autohotkey#10be0bfa368a7726149d22f6a67badb3a11a8530
+Resolved commit: 10be0bfa368a7726149d22f6a67badb3a11a8530
+
 Original file: LICENSE
 
 This is free and unencumbered software released into the public domain.

@@ -12,7 +12,7 @@
   },
   "treeSitter": {
     "parserSource": "github:holy-tao/tree-sitter-autohotkey#10be0bfa368a7726149d22f6a67badb3a11a8530",
-    "wasmBuildTool": "tree-sitter-cli#v0.27.1",
+    "wasmBuildTool": "tree-sitter-cli#v0.27.2",
     "grammar": "autohotkey.wasm",
     "highlightsQuery": "autohotkey-highlights.scm",
     "injectionsQuery": "autohotkey-injections.scm",
