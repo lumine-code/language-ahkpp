@@ -16,6 +16,7 @@
     "grammar": "autohotkey.wasm",
     "highlightsQuery": "autohotkey-highlights.scm",
     "injectionsQuery": "autohotkey-injections.scm",
+    "tagsQuerySupportsLocalPath": true,
     "tagsQuery": "autohotkey-tags.scm",
     "foldsQuery": "autohotkey-folds.scm",
     "indentsQuery": "autohotkey-indents.scm"
